@@ -1,0 +1,195 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f8fafc;
+  color: #111827;
+}
+
+header {
+  background: white;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header p {
+  margin: 0.3rem 0 1rem;
+  color: #6b7280;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.project {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.phase {
+  color: #3b82f6;
+  font-size: 0.85rem;
+}
+
+.timeline {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.guideline-box {
+  text-align: center;
+  background: #ecfdf5;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.guideline-btn {
+  background: #22c55e;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tabs button {
+  border: none;
+  background: #f1f5f9;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tabs button.active {
+  background: #3b82f6;
+  color: white;
+}
+
+.task-card {
+  background: #f9fafb;
+  padding: 0.8rem;
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-status {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.status-progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-blocked {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-complete {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.metric-box {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+}
+
+.metric {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  flex: 1;
+  text-align: center;
+  margin: 0 0.3rem;
+}
+
+.metric strong {
+  display: block;
+  font-size: 1.3rem;
+}
+
+.metric small {
+  color: #6b7280;
+}
+
+.avg-gap {
+  text-align: center;
+  color: #9333ea;
+  font-weight: 600;
+}
+
+textarea,
+input[type="text"] {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  resize: none;
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 0.8rem;
+  padding: 0.7rem;
+  border: none;
+  background: #ef4444;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}

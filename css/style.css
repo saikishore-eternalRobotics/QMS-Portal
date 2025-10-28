@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #F5F6FA;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 95%;
+  padding: 10px;
+  background-color: #0078D4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #005FA3;
+}
+
+.zoho-btn {
+  background-color: #D81B60;
+}
+
+.zoho-btn:hover {
+  background-color: #A31545;
+}
+
+hr {
+  margin: 20px 0;
+}

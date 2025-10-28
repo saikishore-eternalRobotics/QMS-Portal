@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Analyst Dashboard</title>
+    <link rel="stylesheet" href="../css/ba-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <header class="dashboard-header">
+
+        <div class="header-left">
+            <div class="dashboard-title">
+
+                <h1><span class="department">Business Analyst </span>Project Dashboard</h1>
+                <div class="divider"></div>
+                <input type="text" id="searchBar" placeholder="Search projects, requirements, or documents...">
+
+            </div>
+
+            <div class="guidelines-card">
+                <p class="guideline-tag" >
+                    Project Read Me
+                </p>
+                <button id="viewGuidelines" onclick="window.location.href='/html/ba-readme.html'" style="cursor:pointer;">View Guidelines</button>
+                <small>Essential starting point for all BA work.</small>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <i class="fas fa-user-circle profile-icon"></i>
+            <span id="userName"></span>
+            <button id="signOutBtn" class="signout-btn">Sign Out</button>
+        </div>
+
+    </header>
+
+    <main class="dashboard-main">
+
+        <!-- Left Column -->
+        <div class="left-column">
+
+            <div class="template-section">
+  <!-- Agile -->
+  <div class="template-card" data-type="agile">
+    <h3>Agile Task Templates</h3>
+    <ul class="task-container"></ul>
+
+    <form
+      class="upload-form"
+      action="https://script.google.com/macros/s/AKfycbzNIlmpAsGf3oDIsIQHwBIBVQCKbT_3r8imTknIZz36UfJY1kRmMReEZ9dDtURHs9ngCA/exec"
+      method="POST"
+      enctype="multipart/form-data"
+      target="_blank"
+    >
+      <input type="file" name="file" class="file-input" />
+      <button type="submit" class="upload-btn">Upload</button>
+    </form>
+  </div>
+
+  <!-- Waterfall -->
+  <div class="template-card" data-type="waterfall">
+    <h3>Waterfall Task Templates</h3>
+    <ul class="task-container"></ul>
+
+    <form
+      class="upload-form"
+      action="https://script.google.com/macros/s/AKfycbzNIlmpAsGf3oDIsIQHwBIBVQCKbT_3r8imTknIZz36UfJY1kRmMReEZ9dDtURHs9ngCA/exec"
+      method="POST"
+      enctype="multipart/form-data"
+      target="_blank"
+    >
+      <input type="file" name="file" class="file-input" />
+      <button type="submit" class="upload-btn">Upload</button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+            <div class="upcoming-tasks-card">
+                <h3>Upcoming Tasks for Ongoing Projects</h3>
+                <ul>
+                    <li><b>Requirements Elicitation Session Prep</b> — Oct 25</li>
+                    <li><b>Finalize Acceptance Criteria (AC) for Epic 4</b> — Oct 27</li>
+                    <li><b>Sprint 5 Planning Prep</b> — Nov 28</li>
+                    <li><b>Functional Specification Document (FSD)</b> — Nov 5</li>
+                    <li><b>Review & Sign-off on UAT Plan</b> — Nov 8</li>
+                </ul>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-card">
+                    <h3>Project Template Compliance</h3>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Policies and Guidelines by Phase</h3>
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+
+            <h3>BA Tasks by Methodology</h3>
+                <div class="tabs">
+                    <button class="tab active" data-method="agile">Agile (0)</button>
+                    <button class="tab" data-method="waterfall">Waterfall (0)</button>
+                </div>
+            <div class="task-list"></div>
+
+            <div class="notifications-card">
+                <h3>Recent Notifications (3)</h3>
+                <div class="notification red">
+                    <b>Action Required:</b> BRS Docs pending sign-off.
+                    <small>Due: Today, 5:00 PM</small>
+                </div>
+                <div class="notification yellow">
+                    <b>Reminder:</b> Stakeholder Interview tomorrow.
+                    <small>Project Delta Elicitation</small>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/ba-dashboard.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Project Dashboard</title>
+    <link rel="stylesheet" href="../css/fullstack-dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <header class="dashboard-header">
+
+        <div class="header-left">
+            <div class="dashboard-title">
+
+                <h1><span class="department">Full Stack </span>Project Dashboard</h1>
+                <div class="divider"></div>
+                <input type="text" id="searchBar" placeholder="Search projects, requirements, or documents...">
+
+            </div>
+
+            <div class="guidelines-card">
+                <p class="guideline-tag">Project Read Me</p>
+                <button id="viewGuidelines">View Guidelines</button>
+                <small>Essential starting point for all BA work.</small>
+            </div>
+        </div>
+
+        <div class="header-right">
+            <i class="fas fa-user-circle profile-icon"></i>
+            <span id="userName"></span>
+            <button id="signOutBtn" class="signout-btn">Sign Out</button>
+        </div>
+
+    </header>
+
+    <main class="dashboard-main">
+
+        <!-- Left Column -->
+        <div class="left-column">
+
+            <div class="template-section">
+                <div class="template-card">
+                    <h3>Agile Task Templates</h3>
+                    <ul>
+                        <li>Sprint Planning</li>
+                        <li>User Story Refinement</li>
+                        <li>Daily Stand-up</li>
+                        <li>Sprint Review / Demo</li>
+                    </ul>
+                    <div class="template-controls">
+                        <input type="file" class="new-template-input"/>
+                        <button class="btn-add">Add Template</button>
+                        <button class="btn-delete">Delete Template</button>
+                    </div>
+                </div>
+
+                <div class="template-card">
+                    <h3>Waterfall Task Templates</h3>
+                    <ul>
+                        <li>Requirements Documentation</li>
+                        <li>Design & Development</li>
+                        <li>Testing & UAT</li>
+                        <li>Deployment</li>
+                    </ul>
+                    <div class="template-controls">
+                        
+                        <input type="file" class="new-template-input"/>
+                        <button class="btn-add">Add Template</button>
+                        <button class="btn-delete">Delete Template</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="upcoming-tasks-card">
+                <h3>Upcoming Tasks for Ongoing Projects</h3>
+                <ul>
+                    <li><b>Requirements Elicitation Session Prep</b> — Oct 25</li>
+                    <li><b>Finalize Acceptance Criteria (AC) for Epic 4</b> — Oct 27</li>
+                    <li><b>Sprint 5 Planning Prep</b> — Nov 28</li>
+                    <li><b>Functional Specification Document (FSD)</b> — Nov 5</li>
+                    <li><b>Review & Sign-off on UAT Plan</b> — Nov 8</li>
+                </ul>
+            </div>
+
+            <div class="charts-section">
+                <div class="chart-card">
+                    <h3>Project Template Compliance</h3>
+                    <canvas id="chart1"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Policies and Guidelines by Phase</h3>
+                    <canvas id="chart2"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+
+            <h3>Full Stack Developer Tasks by Methodology</h3>
+                <div class="tabs">
+                    <button class="tab active" data-method="agile">Agile (0)</button>
+                    <button class="tab" data-method="waterfall">Waterfall (0)</button>
+                </div>
+            <div class="task-list"></div>
+
+            <!-- <div class="notifications-card">
+                <h3>Recent Notifications (3)</h3>
+                <div class="notification red">
+                    <b>Action Required:</b> BRS Docs pending sign-off.
+                    <small>Due: Today, 5:00 PM</small>
+                </div>
+                <div class="notification yellow">
+                    <b>Reminder:</b> Stakeholder Interview tomorrow.
+                    <small>Project Delta Elicitation</small>
+                </div>
+            </div> -->
+
+            <div class="raid-card">
+  <div class="raid-header">
+    <span class="icon">⚠️</span>
+    <h3>Quick Submission</h3>
+  </div>
+
+  <div class="raid-tabs">
+    <button class="tab active">Send Quick Message</button>
+    <button class="tab">Raise RAID Item</button>
+  </div>
+
+  <div class="raid-form">
+    <select id="raidType">
+      <option>R: Risk</option>
+      <option>A: Action</option>
+      <option>I: Issue</option>
+      <option>D: Dependency</option>
+    </select>
+
+    <input type="text" id="raidTitle" placeholder="Title/Brief Description" />
+
+    <textarea id="raidDetails" rows="3" placeholder="Details and proposed mitigation/owner..."></textarea>
+
+    <button id="submitRaid">Submit RAID Item</button>
+  </div>
+</div>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/fullstack-dashboard.js" type="module"></script>
+</body>
+</html>
